@@ -27,7 +27,7 @@ public class WitherBossMixin {
 
         ci.cancel();
         if(damageSource.getEntity() instanceof ServerPlayer player) {
-            for (ServerPlayer serverPlayer : player.serverLevel().players()) {
+            for (ServerPlayer serverPlayer : player.getLevel().players()) {
                 ((IOwnerable) entity).setOwnerUUID(serverPlayer.getUUID());
                 ItemEntity itemEntity = ((IOwnerable) entity).sdm$spawnAtLocationCustom(Items.NETHER_STAR.getDefaultInstance());
                 if (itemEntity != null) {
