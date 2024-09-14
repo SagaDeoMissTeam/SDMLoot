@@ -1,4 +1,4 @@
-package net.sdm.sdmloot.mixin;
+package net.sdm.sdmlootforge.mixin;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
@@ -6,8 +6,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Items;
-import net.sdm.sdmloot.Config;
-import net.sdm.sdmloot.IOwnerable;
+import net.sdm.sdmlootforge.Config;
+import net.sdm.sdmlootforge.IOwnerable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

@@ -1,4 +1,4 @@
-package net.sdm.sdmloot.mixin;
+package net.sdm.sdmlootforge.mixin;
 
 
 import net.minecraft.resources.ResourceLocation;
@@ -10,9 +10,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.sdm.sdmloot.Config;
-import net.sdm.sdmloot.IOwnerable;
-import net.sdm.sdmloot.entity.IndividualItemEntity;
+import net.sdm.sdmlootforge.Config;
+import net.sdm.sdmlootforge.IOwnerable;
+import net.sdm.sdmlootforge.entity.IndividualItemEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,7 +30,7 @@ public abstract class LivingEntityMixin implements IOwnerable {
     public UUID ownerID = null;
 
     @Inject(method = "dropFromLootTable", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/world/level/storage/loot/LootTable;getRandomItems(Lnet/minecraft/world/level/storage/loot/LootContext;Ljava/util/function/Consumer;)V"),
+            target = "Lnet/minecraft/world/level/storage/loot/LootTable;getRandomItems(Lnet/minecraft/world/level/storage/loot/LootContext;)Lit/unimi/dsi/fastutil/objects/ObjectArrayList;"),
             locals = LocalCapture.CAPTURE_FAILHARD,
             cancellable = true)
     public void sdm$dropFromLootTable(DamageSource damageSource, boolean bl, CallbackInfo ci, ResourceLocation resourceLocation, LootTable lootTable, LootContext.Builder builder){

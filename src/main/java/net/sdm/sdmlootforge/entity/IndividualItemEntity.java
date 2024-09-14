@@ -1,4 +1,4 @@
-package net.sdm.sdmloot.entity;
+package net.sdm.sdmlootforge.entity;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;

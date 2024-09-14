@@ -1,13 +1,14 @@
 {
   "required": true,
-  "package": "net.sdm.sdmloot.mixin",
-  "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "client": [
-  ],
+  "package": "net.sdm.sdmlootforge.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "sdmlootforge.refmap.json",
   "mixins": [
     "LivingEntityMixin",
     "WitherBossMixin"
+  ],
+  "client": [
   ],
   "injectors": {
     "defaultRequire": 1
